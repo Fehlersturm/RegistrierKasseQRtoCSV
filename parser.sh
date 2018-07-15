@@ -48,6 +48,7 @@ summeMwstFloat=$(echo "scale=10; $zwapMwst + $neuzepMwst + $dreizepMwst + $zepMw
 summeMwstDisp=$(echo "scale=2; $summeMwstFloat/1" | bc | sed 's#\.#,#')
 outp="$day.$month.$year,,,,\"$summe\",\"$summeMwstDisp\""
 echo $outp | xclip -selection c
+paplay beep.wav
 #echo ${line}
 #echo $zwap
 #echo "scale=10; $zwap - $zwap / 1.2 " | bc
